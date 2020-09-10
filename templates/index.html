@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Car Price Predictor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculate the value of your car. A sample application build by python-everything.com. Get the source code yourself and start builind your application!">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="contact1">
+        <div class="container-contact1">
+            <form action="/" method="post" class="contact1-form validate-form">
+                <span class="contact1-form-title">
+					<h1>Predict the value of your car!</h1>
+					{% if output %}</br><h4>Value of your car: €{{ output }}</h4>{% endif %}
+				</span>
+                <div class="wrap-input1 validate-input">
+                    <select id="Brand" name="Brand" class="input1">
+						<option disabled selected value>Select a Brand</option>
+						<option value="BMW">BMW</option>
+						<option value="Audi">Audi</option>
+						<option value="Volkswagen">Volkswagen</option>
+						<option value="Mercedes Benz">Mercedes Benz</option>
+						<option value="Peugeot">Peugeot</option>
+						<option value="Opel">Opel</option>
+						<option value="Renault">Renault</option>
+						<option value="Toyota">Toyota</option>
+						<option value="Ford">Ford</option>
+					  </select>
+                    <span class="shadow-input1"></span>
+                </div>
+                <div class="wrap-input1 validate-input">
+                    <select id="Fuel" name="Fuel" class="input1">
+						<option disabled selected value>select Fuel Type</option>
+						<option value="Benzine">Benzine</option>
+						<option value="CNG">CNG</option>
+						<option value="Diesel">Diesel</option>
+						<option value="Elektrisch">Elektrisch</option>
+						<option value="Elektro/Benzine">Elektro/Benzine</option>
+						<option value="Elektro/Diesel">Elektro/Diesel</option>
+						<option value="Ethanol">Ethanol</option>
+						<option value="LPG">LPG</option>
+						<option value="Overig">Overig</option>
+						<option value="Waterstof">Waterstof</option>
+					  </select>
+                    <span class="shadow-input1"></span>
+                </div>
+                <div class="wrap-input1 validate-input">
+                    <select id="Gearbox" name="Gearbox" class="input1">
+						<option disabled selected value>select Gearbox Type</option>
+							<option value="Automatisch">Automatisch</option>
+							<option value="Half/Semi-automaat">Half/Semi-automaat</option>
+							<option value="Handgeschakeld">Handgeschakeldel</option>
+					  </select>
+                    <span class="shadow-input1"></span>
+                </div>
+                <div class="wrap-input1 validate-input">
+                    <input class="input1" type="number" name="Kilometers" placeholder="Kilometers" min="0" max="1000000">
+                    <span class="shadow-input1"></span>
+                </div>
+                <div class="wrap-input1 validate-input">
+                    <input class="input1" type="number" name="Year" placeholder="Year" min="1995" max="2020">
+                    <span class="shadow-input1"></span>
+                </div>
+                <div class="container-contact1-form-btn">
+                    <button class="contact1-form-btn">
+						<span>
+							Calculate price
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+                </div>
+                <span class="contact1-form-footer">
+					Build with Python, Flask and some simple webscraping.
+					Want to have the code behind this application? Visit <a href="https://python-everything.com/">python-everything.com</a>
+				</span>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/tilt/tilt.jquery.min.js') }}"></script>
+</body>
+
+</html>
