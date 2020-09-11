@@ -10,3 +10,6 @@ How-to guides available on my [blog](https://python-everything.com/):
 - part 3: Web interface
 - part 4: Deployment
 - Part 5: Improvements and Future works
+
+
+![Screenshot of the application](/static/images)
