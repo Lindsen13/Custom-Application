@@ -12,4 +12,4 @@ How-to guides available on my [blog](https://python-everything.com/):
 - Part 5: Improvements and Future works
 
 
-![Screenshot of the application](/static/images)
+![Screenshot of the application](/static/images/example.png)
